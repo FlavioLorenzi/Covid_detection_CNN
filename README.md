@@ -1,11 +1,11 @@
 # Covid_detection_CNN
-Covid-non Covid detection, with two experiments: RES_NET transfer learning vs custom CNN trained from scratch
 
 AIRO project: Vision & Perception course
 
 <a href="https://www.dis.uniroma1.it/"><img src="http://www.dis.uniroma1.it/sites/default/files/marchio%20logo%20eng%20jpg.jpg" width="500"></a>
 
 ## Approach 
+Covid-non Covid detection, with two experiments: RES_NET transfer learning vs custom CNN trained from scratch
 
 ![](cnn.gif)
 
@@ -21,7 +21,8 @@ AIRO project: Vision & Perception course
 
 ## Documentation
 
-TODO
+[![SC2 Image](covid.jpg)]
+[![SC2 Image](non-covid.jpg)]
 
 ## Results 
 
