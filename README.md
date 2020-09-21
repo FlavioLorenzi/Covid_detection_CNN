@@ -20,7 +20,7 @@ Covid-non Covid detection, with two experiments: RES_NET transfer learning vs cu
 
 
 ## Documentation
-dataset and part of the transfer learning work is taken from here :<a href="https://github.com/shervinmin/DeepCovid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" width="30"></a>
+dataset and part of the transfer learning work is taken from here: <a href="https://github.com/shervinmin/DeepCovid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" width="30"></a>
 
 COVID
 ![SC2 Image](covid.jpg)
