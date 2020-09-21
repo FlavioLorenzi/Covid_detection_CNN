@@ -21,8 +21,8 @@ Covid-non Covid detection, with two experiments: RES_NET transfer learning vs cu
 
 ## Documentation
 
-[![SC2 Image](covid.jpg)][2]
-[![SC2 Image](non-covid.jpg)]
+![SC2 Image](covid.jpg)
+![SC2 Image](non-covid.jpg)
 
 ## Results 
 
