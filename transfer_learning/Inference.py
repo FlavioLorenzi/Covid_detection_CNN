@@ -1,6 +1,8 @@
-#### Shervin Minaee
-#### March 2020
-#### Inference code for covid detection
+#### Vision and Perception course - project
+#### LORENZI CICIOLLA MANTOVANI
+#### September 2020
+#### Training code for covid detection by finetuning ResNet101
+
 from __future__ import print_function
 import torch, os, copy, time, pickle
 import torch.nn as nn
@@ -21,32 +23,24 @@ import seaborn as sn
 import argparse
 start_time= time.time()
 
-
-
-
 parser = argparse.ArgumentParser(description='COVID-19 Detection from X-ray Images')
-parser.add_argument('--test_covid_path', type=str, default='./dataset/test/covid/',
+parser.add_argument('--test_covid_path', type=str, default='./data/inf/covid/',
                       help='COVID-19 test samples directory')
-
-parser.add_argument('--test_non_covid_path', type=str, default='./dataset/test/non/',
+parser.add_argument('--test_non_covid_path', type=str, default='./data/inf/non/',
                       help='Non-COVID test samples directory')
-
-parser.add_argument('--trained_model_path', type=str, default='./covid_resnet18_epoch50.pt',
+parser.add_argument('--trained_model_path', type=str, default='./covid_resnet101_epoch5.pt',
                       help='The path and name of trained model')
 
+#
 parser.add_argument('--cut_off_threshold', type=float, default= 0.2, 
                     help='cut-off threshold. Any sample with probability higher than this is considered COVID-19 (default: 0.2)')
-parser.add_argument('--batch_size', type=int, default=20, 
+parser.add_argument('--batch_size', type=int, default=32, 
                     help='input batch size for training (default: 20)')
 parser.add_argument('--num_workers', type=int, default=0, 
                     help='number of workers to train (default: 0)')
 
 
 args = parser.parse_args()
-
-
-
-
 
 
 ############### Utility function to find sensitivity and specificity for different cut-off thresholds
@@ -122,26 +116,17 @@ for i in range(len(test_non)):
     non_prob[i,:]= cur_prob.data.numpy()[0,0]
     print("%03d Non-Covid predicted label:%s" %(i, class_names[int(cur_pred.data.numpy())]) )
 
-
-
-#pickle.dump( covid_prob, open( "./results/covid_prob_%s.p" %model_name, "wb" ) )
-#pickle.dump( non_prob, open(   "./results/non_prob_%s.p" %model_name, "wb" ) )
-
-
-
 ############### find sensitivity and specificity
 thresh= args.cut_off_threshold
 sensitivity_40, specificity= find_sens_spec( covid_prob, non_prob, thresh)
 
-
-
 ############### derive labels based on probabilities and cut-off threshold
+# if prob > 0.2 then COVID
 covid_pred = np.where( covid_prob  >thresh, 1, 0)
 non_pred   = np.where( non_prob  >thresh,   1, 0)
 
 
-
-############### derive confusion-matrix
+############### derive confusion-matrix with seaborn
 covid_list= [int(covid_pred[i]) for i in range(len(covid_pred))]
 covid_count = [(x, covid_list.count(x)) for x in set(covid_list)]
 
@@ -208,8 +193,6 @@ pyplot.title("ROC Curve")
 # show the legend
 pyplot.legend(loc='lower right')
 plt.savefig('./ROC_covid19.png') #dpi = 200
-
-
 
 end_time= time.time()
 tot_time= end_time- start_time
