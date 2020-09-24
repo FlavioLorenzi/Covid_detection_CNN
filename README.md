@@ -20,7 +20,10 @@ Covid-non Covid detection, with two experiments: RES_NET transfer learning vs cu
 
 
 ## Documentation
-dataset and part of the transfer learning work is taken from here: (shervinmin/DeepCovid) <a href="https://github.com/shervinmin/DeepCovid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" width="30"></a>
+Idea, part of dataset and of the transfer learning experiment is taken from here: (shervinmin/DeepCovid) <a href="https://github.com/shervinmin/DeepCovid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" width="30"></a>
+
+Dataset, still too small, it has been increased thanks to some Data Augmentation techniques described in the document (pdf).
+
 
 COVID
 ![SC2 Image](covid.jpg)
@@ -29,7 +32,7 @@ NO COVID
 ![SC2 Image](non-covid.jpg)
 
 ## Results 
-
+Very good results for each experiment, with an inference accuracy bigger than 0.9 : this is the consequence of a careful tuning of the parameters, but above all, this is due to the fact that it is a Binary Classification (easier to train than a multiclass one).
 
 [![SC2 Image](result1.png)]
 [![SC2 Image](result2.png)]
