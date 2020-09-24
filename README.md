@@ -5,7 +5,9 @@ AIRO project: Vision & Perception course
 <a href="https://www.dis.uniroma1.it/"><img src="http://www.dis.uniroma1.it/sites/default/files/marchio%20logo%20eng%20jpg.jpg" width="500"></a>
 
 ## Approach 
-Covid-non Covid detection, with two experiments: RES_NET transfer learning vs custom CNN trained from scratch
+Covid-non Covid detection, with two experiments: RES_NET transfer learning vs custom CNN trained from scratch.
+
+The aim is to identify Covid from x-ray photos of lungs, training the network on a non-covid covid dataset (augmented with techniques such as crop, translation, contrast jitter ...).
 
 ![](cnn.gif)
 
@@ -43,3 +45,6 @@ Confusion matrix of the Transfer Learning inference experiment, given a blind ba
 
 
 ![SC2 Image](result2.png)
+
+
+See other results, indices and successes in the pdf document.
