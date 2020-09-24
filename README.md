@@ -37,9 +37,9 @@ Very good results for each experiment, with an inference accuracy bigger than 0.
 Custom CNN training-test plot:
 
 
-![SC2 Image(result1.png)
+![SC2 Image(result1.png)]
 
 Confusion matrix of the Transfer Learning inference experiment, given a blind balanced dataset of 100 imgs:
 
 
-![SC2 Image(result2.png)
+![SC2 Image(result2.png)]
