@@ -34,5 +34,8 @@ NO COVID
 ## Results 
 Very good results for each experiment, with an inference accuracy bigger than 0.9 : this is the consequence of a careful tuning of the parameters, but above all, this is due to the fact that it is a Binary Classification (easier to train than a multiclass one).
 
-[![SC2 Image](result1.png)]
-[![SC2 Image](result2.png)]
+Custom CNN training-test plot:
+[![SC2 Image](result1.png)
+
+Confusion matrix of the Transfer Learning inference experiment, given a blind balanced dataset of 100 imgs:
+[![SC2 Image](result2.png)
