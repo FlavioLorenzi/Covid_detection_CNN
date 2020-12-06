@@ -48,3 +48,11 @@ Confusion matrix of the Transfer Learning inference experiment, given a blind ba
 
 
 See other results, indices and successes in the pdf document.
+
+## Final Considerations and Future Works
+
+The two final accuracies differ very little (0.95 v 0.93) and therefore it is difficult to judge which model is really better; but we came to the conclusion that it is better to choose transfer learning, because not only does it have better accuracy, but above all it did not require a large computational calculation, performed in a short time and locally, while the second experiment required Colab's gpu to speed up the timing.
+
+
+In the future, having more images available, it would be interesting to pull the custom network on a larger dataset, in order to seek even better performance; or the network could be extended for a classification that is no longer binary but multiclass, introducing for example the recognition of various pathologies (pneumonia, water in the lungs, fractures, etc.). It would be an excellent pathology detection.
+
